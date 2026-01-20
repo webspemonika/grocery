@@ -1,0 +1,27 @@
+/* 1.taiwindcss */
+@import "tailwindcss";
+/* 2.font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 3.font-family + colors............ */
+theme {
+    /* 3.1 font-family */
+    --font-inter: "Inter", sans-serif;
+    /* 3.2 colors */
+    /* --color-:; */
+    --color-green-900: #073E27;
+    --color-primary: #6EC1E4;
+    --color-accent: #61CE70;
+    --color-base1: #95ae00;
+    --color-base3: #111111;
+    --color-secon: #54595F;
+    --color-text: #7A7A7A;
+    --color-base4: #666666;
+    --color-base5: #777777;
+    --color-base6: #888888;
+    --color-base7: #f3f6f1;
+    --color-base8: #fafcfe;
+    --color-base9: #ffffff;
+}
+
+/* 4. typography */
