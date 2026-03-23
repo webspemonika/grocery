@@ -1,18 +1,22 @@
 /* 1.taiwindcss */
 @import "tailwindcss";
+
+/* Enable dark mode variant */
+@variant dark (.dark &);
+
 /* 2.font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* 3.font-family + colors............ */
-theme {
+@theme {
     /* 3.1 font-family */
     --font-inter: "Inter", sans-serif;
     /* 3.2 colors */
     /* --color-:; */
+    /* --color-: #6EC1E4; */
+    /* --color-: #61CE70; */
     --color-green-900: #073E27;
-    --color-primary: #6EC1E4;
-    --color-accent: #61CE70;
-    --color-base1: #95ae00;
+    --color-primary: #95ae00;
     --color-base3: #111111;
     --color-secon: #54595F;
     --color-text: #7A7A7A;
@@ -24,4 +28,65 @@ theme {
     --color-base9: #ffffff;
 }
 
-/* 4. typography */
+body {
+    background-color: #F3F6F1;
+}
+html.dark body {
+    background-color: #141414;
+}
+/* 4 . layout */
+@layer utilities {
+
+    /* start */
+    .mobile-padding {
+        @apply px-2 md:px-0
+    }
+
+
+    /* end */
+}
+@layer utilities {
+
+    /* start */
+    .text-sm-white {
+        @apply text-sm text-white font-normal font-inter leading-[150%] 
+    }
+
+
+    /* end */
+}
+
+/* btn , anchor ,badge------------------------------ */
+@layer utilities {
+    .normal-swiper-left {
+        @apply w-7.75 h-7.75 inline-flex justify-center items-center rounded-full bg-primary dark:bg-[#25282B] hover:bg-green-900 dark:hover:bg-[#ffd21d] text-[14px] text-white dark:hover:text-black cursor-pointer
+    }
+
+    .normal-swiper-right {
+        @apply w-7.75 h-7.75 inline-flex justify-center items-center rounded-full bg-primary dark:bg-[#25282B] hover:bg-green-900 dark:hover:bg-[#ffd21d] text-[14px] text-white dark:hover:text-black cursor-pointer
+    }
+
+    .subscribe-btn {
+        @apply text-[15px] text-white font-medium font-inter leading-[200%] capitalize px-7.5 py-1.5 rounded-full bg-primary hover:bg-green-900 cursor-pointer
+    }
+
+    /* quick link product badge */
+    .quick-link {
+        @apply w-9 h-9 inline-flex justify-center items-center rounded-full bg-white  dark:bg-[#25282B]  dark:hover:bg-[#ffd21d]  hover:bg-primary shadow-[1.5px_2.598px_7px_0_rgba(0,0,0,0.1)] text-lg text-black dark:text-white dark:hover:text-black hover:text-white cursor-pointer
+    }
+
+    /* absolute position swiper navigation btn */
+    .swiper-left {
+        @apply w-7.75 h-7.75 rounded-full bg-primary dark:bg-[#25282B] hover:bg-green-900 dark:hover:bg-[#ffd21d] z-10 inline-flex justify-center items-center text-[14px] text-white  dark:hover:text-black cursor-pointer absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2
+    }
+
+    .swiper-right {
+        @apply w-7.75 h-7.75 rounded-full bg-primary dark:bg-[#25282B] hover:bg-green-900 dark:hover:bg-[#ffd21d] z-10 inline-flex justify-center items-center text-[14px] text-white  dark:hover:text-black cursor-pointer absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2
+    }
+    .quick-link-header{
+        @apply w-10 h-10 inline-flex justify-center items-center  rounded-full border  border-gray-600  text-base text-white
+    }
+    .filter-btn{
+        @apply outline-none  cursor-pointer px-3  md:px-4.5  py-1.5 md:py-2.5  rounded-full bg-primary  dark:bg-[#25282B] dark:hover:bg-[#ffd21d] text-xs md:text-sm text-white dark:hover:text-black font-medium font-inter leading-[150%] capitalize
+    }
+}

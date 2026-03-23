@@ -1,10 +1,11 @@
 import React from 'react';
+import FilterSidebar from '../utils/FilterSidebar';
 
 const ShopPage = () => {
     return (
-        <div>
-            this is shop page................
-        </div>
+  <>
+  <FilterSidebar/>
+  </>
     );
 };
 

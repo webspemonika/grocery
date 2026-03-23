@@ -4,10 +4,12 @@ import { Outlet } from 'react-router';
 import Newsletter from '../components/footer/Newsletter';
 import Footer from '../components/footer/Footer';
 import TopHeader from '../components/header/TopHeader';
+import DarkLightMode from '../utils/DarkLightMode';
 
 const FrontendLayout = () => {
     return (
         <>
+        <DarkLightMode/>
             {/* 1.header... */}
             <TopHeader />
             <MainHeader />
